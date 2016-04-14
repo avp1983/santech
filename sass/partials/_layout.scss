@@ -74,7 +74,22 @@ $border-box-sizing: true;
 		}
 	}
 	
-	
+	.catalogMenu {
+		@include span-columns(9, 9);
+		
+		@include at-breakpoint($L) {
+			@include span-columns(3, 9);
+			@include suffix(1,9);
+		}		
+	}
+	[role="main"] {
+		@include span-columns(9, 9);
+		
+		@include at-breakpoint($L) {
+			
+			@include span-columns(6 omega, 9);
+		}	
+	}
 	
 
 }
